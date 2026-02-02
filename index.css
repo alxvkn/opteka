@@ -1,0 +1,31 @@
+main {
+    display: flex;
+    background-color: #F6F6F6;
+    padding: 32px;
+    gap: 32px;
+    form > * {
+        font-size: inherit;
+    }
+}
+
+main section {
+    padding: 32px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: #eee;
+}
+
+main section.categories-and-filters {
+    flex: 1;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        list-style-type: none;
+        margin-left: 32px;
+    }
+}
+
+main section.products-container {
+    flex: 2;
+}
