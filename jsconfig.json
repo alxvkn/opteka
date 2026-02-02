@@ -1,0 +1,6 @@
+{
+    "$schema": "https://schemastore.org/jsconfig.json",
+    "compilerOptions": {
+        "checkJs": true
+    }
+}
