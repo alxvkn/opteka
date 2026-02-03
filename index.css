@@ -3,7 +3,8 @@ main {
     background-color: #F6F6F6;
     padding: 32px;
     gap: 32px;
-    form > * {
+
+    form>* {
         font-size: inherit;
     }
 }
@@ -17,6 +18,7 @@ main section {
 
 main section.categories-and-filters {
     flex: 1;
+
     ul {
         display: flex;
         flex-direction: column;
@@ -28,4 +30,8 @@ main section.categories-and-filters {
 
 main section.products-container {
     flex: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
