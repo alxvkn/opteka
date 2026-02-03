@@ -19,6 +19,11 @@ main section {
 main section.categories-and-filters {
     flex: 1;
 
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
     ul {
         display: flex;
         flex-direction: column;
