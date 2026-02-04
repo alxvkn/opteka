@@ -2,6 +2,7 @@
     "$schema": "https://schemastore.org/jsconfig.json",
     "compilerOptions": {
         "module": "esnext",
+        "target": "ES2016",
         "checkJs": true
     }
 }
