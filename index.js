@@ -1,4 +1,4 @@
-import { OptekaProductCard } from "./components/opteka-product-card/element.mjs"
+import { OptekaProductCard } from "./components/opteka-product-card/element.js"
 
 const products = [
     {
