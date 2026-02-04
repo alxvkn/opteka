@@ -1,19 +1,18 @@
-// @ts-check
 // @ts-ignore
 import sheet from './style.css' with { type: 'css' }
+
+const templatePromise = fetch(new URL('./template.html', import.meta.url)).then(r => r.text())
 
 export class OptekaFooter extends HTMLElement {
     constructor() {
         super()
     }
 
-    connectedCallback() {
+    async connectedCallback() {
         const shadow = this.attachShadow({ mode: 'open' })
-        shadow.innerHTML = `
-<footer>
-    2026, Все права защищены &copy;
-</footer>
-        `
+
+        shadow.innerHTML = await templatePromise
+
         shadow.adoptedStyleSheets = [sheet]
     }
 }
