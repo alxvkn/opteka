@@ -4,7 +4,14 @@ const KEY = 'favorites'
     * @returns {number[]}
     */
 export function getFavorites() {
-    return JSON.parse(localStorage.getItem(KEY)) ?? []
+    let favorites
+    try {
+        favorites = JSON.parse(localStorage.getItem(KEY))
+    } catch (err) {
+        console.warn(err, 'while retrieving favorites from localStorage. returning an empty array')
+        favorites = []
+    }
+    return favorites
 }
 
 /**
