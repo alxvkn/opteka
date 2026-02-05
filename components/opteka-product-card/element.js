@@ -96,7 +96,7 @@ export class OptekaProductCard extends HTMLElement {
         this.cartLink.addEventListener('click', e => {
             e.preventDefault()
             if (this.isInCart) {
-                location.href = '/cart.html'
+                location.href = 'cart.html'
             } else {
                 addToCart(Number(this.dataset.id))
                 this.dataset.cartText = IN_CART_TEXT
