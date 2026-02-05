@@ -66,7 +66,6 @@ export class OptekaProductCard extends HTMLElement {
                 addFavorite(Number(this.dataset.id))
                 this.dataset.favoriteText = REMOVE_FAVORITE_TEXT
             }
-            console.log(getFavorites())
         })
 
         shadow.adoptedStyleSheets = [sheet]
