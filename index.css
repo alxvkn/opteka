@@ -17,7 +17,8 @@ main section {
 }
 
 main section.categories-and-filters {
-    flex: 1;
+    width: 456px;
+    font-weight: 500;
 
     a {
         text-decoration: none;
@@ -31,10 +32,17 @@ main section.categories-and-filters {
         list-style-type: none;
         margin-left: 32px;
     }
+
+    form {
+        margin-left: 32px;
+
+        #search {
+            width: 100%;
+        }
+    }
 }
 
 main section.products-container {
-    flex: 2;
 
     display: flex;
     flex-wrap: wrap;

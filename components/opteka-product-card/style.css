@@ -24,7 +24,7 @@
         gap: 8px;
 
         #name {
-            width: 70%;
+            margin-right: 70px;
         }
 
         #name, #price {
