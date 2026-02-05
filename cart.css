@@ -32,6 +32,10 @@ main section.content-container {
     gap: 16px;
 }
 
+.total {
+    text-align: right;
+}
+
 .empty-message {
     width: 100%;
     text-align: center;

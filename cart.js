@@ -1,10 +1,22 @@
 import { OptekaCartItem } from "./components/opteka-cart-item/element.js"
 import { getCart } from "./data/cart.js"
 import { getProducts } from "./data/products.js"
+import formatPrice from "./util/formatPrice.js"
 
 const products = getProducts()
 const itemsContainer = document.querySelector('.items-container')
+/** @type HTMLDivElement */
 const totalDiv = document.querySelector('.total')
+
+const updateTotal = () => {
+    const products = getProducts()
+
+    const total = formatPrice(getCart().map(cr => cr.quantity * products.find(p => p.id == cr.productId).price).reduce((acc, n) => acc + n))
+
+    totalDiv.innerText = 'Общая сумма: ' + total
+}
+
+updateTotal()
 
 const cart = getCart()
 
@@ -22,3 +34,5 @@ cart.forEach(cartItem => {
 
     itemsContainer.appendChild(item)
 })
+
+itemsContainer.addEventListener('cartChange', updateTotal)
