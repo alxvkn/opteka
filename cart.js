@@ -11,7 +11,7 @@ const totalDiv = document.querySelector('.total')
 const updateTotal = () => {
     const products = getProducts()
 
-    const total = formatPrice(getCart().map(cr => cr.quantity * products.find(p => p.id == cr.productId).price).reduce((acc, n) => acc + n))
+    const total = formatPrice(getCart().map(cr => cr.quantity * products.find(p => p.id == cr.productId).price).reduce((acc, n) => { return acc + n }, 0))
 
     totalDiv.innerText = 'Общая сумма: ' + total
 }
