@@ -9,8 +9,8 @@ export function getFavorites() {
         favorites = JSON.parse(localStorage.getItem(KEY))
     } catch (err) {
         console.warn(err, 'while retrieving favorites from localStorage. returning an empty array')
-        favorites = []
     }
+    if (!favorites) favorites = []
     return favorites
 }
 
