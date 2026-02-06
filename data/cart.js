@@ -85,3 +85,26 @@ export function removeAllFromCart(id) {
 
     localStorage.setItem(KEY, JSON.stringify(cart))
 }
+
+/**
+ * Clear the entire cart
+ */
+export function clearCart() {
+    localStorage.removeItem(KEY)
+}
+
+/**
+ * Calculate total price of all items in cart
+ * @param {import('./products.js').Product[]} products
+ * @returns {number}
+ */
+export function getCartTotal(products) {
+    const cart = getCart()
+    return cart.reduce((total, cartItem) => {
+        const product = products.find(p => p.id === cartItem.productId)
+        if (product) {
+            return total + (product.price * cartItem.quantity)
+        }
+        return total
+    }, 0)
+}

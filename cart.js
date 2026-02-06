@@ -7,13 +7,24 @@ const products = getProducts()
 const itemsContainer = document.querySelector('.items-container')
 /** @type HTMLDivElement */
 const totalDiv = document.querySelector('.total')
+/** @type HTMLAnchorElement */
+const checkoutBtn = document.getElementById('checkout-btn')
 
 const updateTotal = () => {
     const products = getProducts()
+    const cart = getCart()
 
-    const total = formatPrice(getCart().map(cr => cr.quantity * products.find(p => p.id == cr.productId).price).reduce((acc, n) => { return acc + n }, 0))
+    if (cart.length === 0) {
+        totalDiv.innerText = ''
+        itemsContainer.innerHTML = '<div class="empty-message">Ваша корзина пуста</div>'
+        checkoutBtn.classList.add('disabled')
+        return
+    }
+
+    const total = formatPrice(cart.map(cr => cr.quantity * products.find(p => p.id == cr.productId).price).reduce((acc, n) => { return acc + n }, 0))
 
     totalDiv.innerText = 'Общая сумма: ' + total
+    checkoutBtn.classList.remove('disabled')
 }
 
 updateTotal()
