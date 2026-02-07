@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: "Inter";
+    font-size: 24px;
+}
+
+input, textarea, button, select {
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #F6F6F6;
+    padding: 32px;
+    gap: 16px;
+}
+
+main section {
+    padding: 32px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: #eee;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

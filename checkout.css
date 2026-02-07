@@ -1,18 +1,4 @@
-main {
-    display: flex;
-    flex-direction: column;
-    background-color: #F6F6F6;
-    padding: 32px;
-    gap: 16px;
-}
-
-.page-title {
-    font-weight: 700;
-    font-size: 32px;
-    margin: 0 0 24px 0;
-    width: 100%;
-    text-align: center;
-}
+@import 'css/page-title.css';
 
 main section.content-container {
     flex: 1;
