@@ -21,13 +21,18 @@ header {
     nav {
         flex-grow: 1;
         font-weight: 700;
-        font-size: 36px;
 
         ul {
             display: flex;
             justify-content: space-evenly;
 
             list-style-type: none;
+        }
+    }
+
+    @media (width <= 1280px) {
+        nav {
+            display: none;
         }
     }
 
