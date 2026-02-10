@@ -1,0 +1,22 @@
+@import 'css/page-title.css';
+
+a {
+    text-decoration: none;
+}
+
+section.links {
+    max-width: 360px;
+    ul {
+        padding-left: 36px;
+        list-style-type: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+section#view {
+    background-color: transparent;
+    border: none;
+}

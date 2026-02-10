@@ -98,10 +98,3 @@ export function deleteOrder(id) {
     const orders = getOrders().filter(order => order.id !== id)
     localStorage.setItem(KEY, JSON.stringify(orders))
 }
-
-/**
- * Clear all orders (use with caution)
- */
-export function clearOrders() {
-    localStorage.removeItem(KEY)
-}

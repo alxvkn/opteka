@@ -6,7 +6,8 @@ main {
 }
 
 main section.categories-and-filters {
-    width: 456px;
+    flex-grow: 0;
+    min-width: 360px;
     font-weight: 500;
 
     a {

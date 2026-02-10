@@ -1,0 +1,29 @@
+.page-title {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 0 0 24px 0;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 16px;
+}
+
+.card {
+    padding: 32px;
+    border-radius: 15px;
+    border: 1px solid black;
+
+    background-color: #eee;
+
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    text-align: center;
+
+    div {
+        font-size: larger;
+        font-weight: 500;
+    }
+}
