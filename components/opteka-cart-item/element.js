@@ -15,7 +15,7 @@ function render(template, data) {
     return template.replace(/\{\{(\w+)\}\}/g, (_, key) => data[key] ?? `{{${key}}}`)
 }
 
-const cartChangeEvent = new CustomEvent('cartChange')
+const cartChangeEvent = new CustomEvent('cartChange', { bubbles: true })
 
 export class OptekaCartItem extends HTMLElement {
     constructor() {
@@ -38,21 +38,21 @@ export class OptekaCartItem extends HTMLElement {
         decreaseBtn.addEventListener('click', () => {
             const productId = Number(this.dataset.id)
             removeOneFromCart(productId)
-            this.parentElement.dispatchEvent(cartChangeEvent)
+            this.dispatchEvent(cartChangeEvent)
             this.updateDisplay()
         })
 
         increaseBtn.addEventListener('click', () => {
             const productId = Number(this.dataset.id)
             addToCart(productId)
-            this.parentElement.dispatchEvent(cartChangeEvent)
+            this.dispatchEvent(cartChangeEvent)
             this.updateDisplay()
         })
 
         deleteBtn.addEventListener('click', () => {
             const productId = Number(this.dataset.id)
             removeAllFromCart(productId)
-            this.parentElement.dispatchEvent(cartChangeEvent)
+            this.dispatchEvent(cartChangeEvent)
             this.remove()
         })
     }
