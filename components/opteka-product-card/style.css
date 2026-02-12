@@ -17,7 +17,8 @@
     color: #1E1E1E;
 
     img {
-        width: 100%;
+        object-fit: scale-down;
+        max-height: 247px;
     }
 
     > div {

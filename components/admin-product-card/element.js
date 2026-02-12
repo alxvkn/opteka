@@ -1,4 +1,3 @@
-import { addToCart } from "../../data/cart.js"
 import { deleteProduct, getProductById } from "../../data/products.js"
 import formatPrice from "../../util/formatPrice.js"
 

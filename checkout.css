@@ -105,32 +105,6 @@ main section.content-container {
     margin-top: 32px;
 }
 
-.btn {
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    flex: 1;
-}
-
-.btn-secondary {
-    background-color: #CDCDCD;
-    color: #333;
-    border: 1px solid black;
-}
-
-.btn-primary {
-    background-color: #3645EA;
-    color: white;
-    border: 1px solid black;
-}
-
 textarea {
     resize: vertical;
     min-height: 150px;

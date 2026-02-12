@@ -31,29 +31,3 @@ main section.content-container {
     justify-content: stretch;
     margin-top: 24px;
 }
-
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 32px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-}
-
-.btn-primary {
-    background-color: #3645EA;
-    color: white;
-}
-
-.btn-primary.disabled {
-    background-color: #a0a0a0;
-    cursor: not-allowed;
-    pointer-events: none;
-}
